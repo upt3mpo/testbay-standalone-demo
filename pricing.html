@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing - TestBay</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <a href="index.html" class="text-2xl font-bold text-blue-600"
+                >TestBay</a
+              >
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Home</a
+            >
+            <a
+              href="pricing.html"
+              class="text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Pricing</a
+            >
+            <a
+              href="demo.html"
+              class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
+              >Try Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Pricing Header -->
+    <div class="bg-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+            Complete Pricing
+          </h1>
+          <p class="mt-4 text-xl text-gray-600">
+            Choose the perfect plan for your team's testing needs
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Plans: First Row (3 columns) -->
+    <div class="bg-gray-100 pb-8 pt-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8"
+        >
+          <!-- Free Plan -->
+          <div
+            class="flex h-full flex-col items-center justify-between rounded-lg bg-white p-6 shadow-lg border border-gray-200"
+          >
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-gray-900">Free</h3>
+              <p class="mt-2 text-sm text-gray-600">
+                Perfect for getting started
+              </p>
+              <p class="mt-6">
+                <span class="text-3xl font-extrabold text-gray-900">$0</span>
+                <span class="text-gray-600">/month</span>
+              </p>
+            </div>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">1 project</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">100 runs/month</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">1 team member</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Email notifications</span>
+              </li>
+            </ul>
+            <div class="mt-6 w-full">
+              <a
+                href="demo.html"
+                class="block w-full bg-gray-600 text-white text-center px-4 py-2 rounded-md hover:bg-gray-700"
+              >
+                Get Started Free
+              </a>
+            </div>
+          </div>
+
+          <!-- Starter Plan -->
+          <div
+            class="flex h-full flex-col items-center justify-between rounded-lg bg-white p-6 shadow-lg border border-gray-200"
+          >
+            <div class="text-center">
+              <h3 class="text-xl font-bold text-gray-900">Starter</h3>
+              <p class="mt-2 text-sm text-gray-600">
+                Perfect for small teams and individual developers
+              </p>
+              <p class="mt-6">
+                <span class="text-3xl font-extrabold text-gray-900">$29</span>
+                <span class="text-gray-600">/month</span>
+              </p>
+            </div>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Up to 5 projects</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">1,000 test runs/month</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Basic analytics</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Email support</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Up to 3 team members</span>
+              </li>
+            </ul>
+            <div class="mt-6 w-full">
+              <a
+                href="demo.html"
+                class="block w-full bg-blue-600 text-white text-center px-4 py-2 rounded-md hover:bg-blue-700"
+              >
+                Start Free Trial
+              </a>
+            </div>
+          </div>
+
+          <!-- Professional Plan -->
+          <div
+            class="flex h-full flex-col items-center justify-between rounded-lg bg-white p-6 shadow-lg border-2 border-blue-500"
+          >
+            <div class="text-center">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Professional</h3>
+                <span
+                  class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Most Popular</span
+                >
+              </div>
+              <p class="mt-2 text-sm text-gray-600">
+                Great for growing teams and larger test suites
+              </p>
+              <p class="mt-6">
+                <span class="text-3xl font-extrabold text-gray-900">$99</span>
+                <span class="text-gray-600">/month</span>
+              </p>
+            </div>
+            <ul class="mt-6 space-y-3">
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Up to 25 projects</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">10,000 test runs/month</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Advanced analytics</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Slack integrations</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Priority support</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-lucide="check" class="mr-2 h-4 w-4 text-green-500"></i>
+                <span class="text-gray-700">Up to 10 team members</span>
+              </li>
+            </ul>
+            <div class="mt-6 w-full">
+              <a
+                href="demo.html"
+                class="block w-full bg-blue-600 text-white text-center px-4 py-2 rounded-md hover:bg-blue-700"
+              >
+                Start Free Trial
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="bg-white py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Enterprise
+          </h2>
+          <p class="mt-4 text-xl text-gray-600">
+            For large organizations with custom needs and dedicated support
+          </p>
+        </div>
+        <div class="mt-10">
+          <div class="rounded-lg bg-gray-50 p-8">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                  Custom Solutions
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Need something specific? We'll work with you to create a
+                  custom plan that fits your exact requirements.
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-center text-sm">
+                    <i
+                      data-lucide="check"
+                      class="mr-2 h-4 w-4 text-green-500"
+                    ></i>
+                    <span class="text-gray-700"
+                      >Unlimited projects and test runs</span
+                    >
+                  </li>
+                  <li class="flex items-center text-sm">
+                    <i
+                      data-lucide="check"
+                      class="mr-2 h-4 w-4 text-green-500"
+                    ></i>
+                    <span class="text-gray-700"
+                      >Custom integrations and APIs</span
+                    >
+                  </li>
+                  <li class="flex items-center text-sm">
+                    <i
+                      data-lucide="check"
+                      class="mr-2 h-4 w-4 text-green-500"
+                    ></i>
+                    <span class="text-gray-700">Dedicated account manager</span>
+                  </li>
+                  <li class="flex items-center text-sm">
+                    <i
+                      data-lucide="check"
+                      class="mr-2 h-4 w-4 text-green-500"
+                    ></i>
+                    <span class="text-gray-700"
+                      >SLA guarantees and uptime commitments</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="text-center lg:text-right">
+                <div class="mb-6">
+                  <p class="text-4xl font-extrabold text-gray-900">Custom</p>
+                  <p class="text-gray-600">pricing</p>
+                </div>
+                <a
+                  href="demo.html"
+                  class="inline-block bg-gray-600 text-white px-8 py-3 rounded-md hover:bg-gray-700"
+                >
+                  Contact Sales
+                </a>
+                <p class="mt-4 text-sm text-gray-600">
+                  Get in touch to discuss your specific needs
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="bg-gray-100 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-lg font-medium text-gray-900">
+                Can I try before I buy?
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Yes! We offer a 14-day free trial on all paid plans. No credit
+                card required.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-gray-900">
+                What test frameworks do you support?
+              </h3>
+              <p class="mt-2 text-gray-600">
+                We support all major testing frameworks including Jest, Cypress,
+                Playwright, Pytest, JUnit, and more.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-gray-900">
+                Can I cancel anytime?
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Absolutely. You can cancel your subscription at any time with no
+                questions asked.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-medium text-gray-900">
+                Do you offer volume discounts?
+              </h3>
+              <p class="mt-2 text-gray-600">
+                Yes! Contact our sales team for custom pricing on large
+                deployments and enterprise needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-600">
+      <div
+        class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8"
+      >
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+          Ready to get started?
+        </h2>
+        <p class="mt-4 text-lg leading-6 text-blue-200">
+          Try our demo today and see how TestBay can improve your testing
+          workflow.
+        </p>
+        <a
+          href="demo.html"
+          class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 sm:w-auto"
+        >
+          Launch Demo
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-white">TestBay</h3>
+          <p class="mt-2 text-gray-400">Test result management made simple</p>
+          <div class="mt-6 flex justify-center space-x-6">
+            <a href="index.html" class="text-gray-400 hover:text-gray-300"
+              >Home</a
+            >
+            <a href="pricing.html" class="text-gray-400 hover:text-gray-300"
+              >Pricing</a
+            >
+            <a href="demo.html" class="text-gray-400 hover:text-gray-300"
+              >Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

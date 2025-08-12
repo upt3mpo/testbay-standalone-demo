@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo - TestBay</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <a href="index.html" class="text-2xl font-bold text-blue-600"
+                >TestBay</a
+              >
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Home</a
+            >
+            <a
+              href="pricing.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Pricing</a
+            >
+            <a
+              href="demo.html"
+              class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium"
+              >Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Demo Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">TestBay Demo</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Experience the full TestBay platform without signing up. All data is
+          stored locally in your browser, giving you a complete understanding of
+          how TestBay can improve your testing workflow.
+        </p>
+      </div>
+
+      <!-- Demo Features Overview -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 text-center"
+        >
+          <div class="flex justify-center mb-4">
+            <i data-lucide="folder" class="h-12 w-12 text-blue-600"></i>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">
+            Project Management
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Create and manage test projects with different frameworks and
+            configurations.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 text-center"
+        >
+          <div class="flex justify-center mb-4">
+            <i data-lucide="upload" class="h-12 w-12 text-green-600"></i>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">Test Results</h3>
+          <p class="text-gray-600 text-sm">
+            Upload and manage test results from various frameworks with detailed
+            status tracking.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 text-center"
+        >
+          <div class="flex justify-center mb-4">
+            <i data-lucide="bar-chart-3" class="h-12 w-12 text-purple-600"></i>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">
+            Analytics & Insights
+          </h3>
+          <p class="text-gray-600 text-sm">
+            View comprehensive analytics, success rates, and performance trends.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 text-center"
+        >
+          <div class="flex justify-center mb-4">
+            <i data-lucide="home" class="h-12 w-12 text-blue-600"></i>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">Dashboard</h3>
+          <p class="text-gray-600 text-sm">
+            Get an overview of your test performance with key metrics and recent
+            activity.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 text-center"
+        >
+          <div class="flex justify-center mb-4">
+            <i data-lucide="settings" class="h-12 w-12 text-gray-600"></i>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">
+            Data Management
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Export, import, or reset your demo data to start fresh anytime.
+          </p>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 text-center"
+        >
+          <div class="flex justify-center mb-4">
+            <i data-lucide="shield" class="h-12 w-12 text-green-600"></i>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">Privacy First</h3>
+          <p class="text-gray-600 text-sm">
+            All data stays in your browser. No servers, no tracking, complete
+            privacy.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Start Links -->
+      <div class="bg-white rounded-lg shadow border border-gray-200 p-8 mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+          Quick Start
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <a href="demo-dashboard.html" class="group">
+            <div
+              class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition-colors"
+            >
+              <i
+                data-lucide="home"
+                class="h-8 w-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform"
+              ></i>
+              <h3 class="font-medium text-gray-900">Dashboard</h3>
+              <p class="text-sm text-gray-600 mt-1">View overview</p>
+            </div>
+          </a>
+
+          <a href="demo-projects.html" class="group">
+            <div
+              class="bg-green-50 rounded-lg p-6 text-center hover:bg-green-100 transition-colors"
+            >
+              <i
+                data-lucide="plus"
+                class="h-8 w-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform"
+              ></i>
+              <h3 class="font-medium text-gray-900">Create Project</h3>
+              <p class="text-sm text-gray-600 mt-1">Start testing</p>
+            </div>
+          </a>
+
+          <a href="demo-runs.html" class="group">
+            <div
+              class="bg-purple-50 rounded-lg p-6 text-center hover:bg-purple-100 transition-colors"
+            >
+              <i
+                data-lucide="upload"
+                class="h-8 w-8 text-purple-600 mx-auto mb-3 group-hover:scale-110 transition-transform"
+              ></i>
+              <h3 class="font-medium text-gray-900">Upload Results</h3>
+              <p class="text-sm text-gray-600 mt-1">Add test data</p>
+            </div>
+          </a>
+
+          <a href="demo-analytics.html" class="group">
+            <div
+              class="bg-orange-50 rounded-lg p-6 text-center hover:bg-orange-100 transition-colors"
+            >
+              <i
+                data-lucide="bar-chart-3"
+                class="h-8 w-8 text-orange-600 mx-auto mb-3 group-hover:scale-110 transition-transform"
+              ></i>
+              <h3 class="font-medium text-gray-900">View Analytics</h3>
+              <p class="text-sm text-gray-600 mt-1">See insights</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Demo Navigation -->
+      <div class="bg-white rounded-lg shadow border border-gray-200 p-8 mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+          Full Demo Experience
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a
+            href="demo-dashboard.html"
+            class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <i data-lucide="home" class="h-6 w-6 text-blue-600 mr-3"></i>
+            <div>
+              <p class="font-medium text-gray-900">Dashboard</p>
+              <p class="text-sm text-gray-600">Overview and key metrics</p>
+            </div>
+          </a>
+
+          <a
+            href="demo-projects.html"
+            class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <i data-lucide="folder" class="h-6 w-6 text-blue-600 mr-3"></i>
+            <div>
+              <p class="font-medium text-gray-900">Projects</p>
+              <p class="text-sm text-gray-600">Manage test projects</p>
+            </div>
+          </a>
+
+          <a
+            href="demo-runs.html"
+            class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <i data-lucide="play" class="h-6 w-6 text-blue-600 mr-3"></i>
+            <div>
+              <p class="font-medium text-gray-900">Test Runs</p>
+              <p class="text-sm text-gray-600">View and manage results</p>
+            </div>
+          </a>
+
+          <a
+            href="demo-analytics.html"
+            class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <i data-lucide="bar-chart-3" class="h-6 w-6 text-blue-600 mr-3"></i>
+            <div>
+              <p class="font-medium text-gray-900">Analytics</p>
+              <p class="text-sm text-gray-600">Deep insights and trends</p>
+            </div>
+          </a>
+
+          <a
+            href="demo-settings.html"
+            class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <i data-lucide="settings" class="h-6 w-6 text-blue-600 mr-3"></i>
+            <div>
+              <p class="font-medium text-gray-900">Settings</p>
+              <p class="text-sm text-gray-600">Data management</p>
+            </div>
+          </a>
+
+          <a
+            href="index.html"
+            class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+          >
+            <i
+              data-lucide="external-link"
+              class="h-6 w-6 text-blue-600 mr-3"
+            ></i>
+            <div>
+              <p class="font-medium text-gray-900">Learn More</p>
+              <p class="text-sm text-gray-600">About TestBay platform</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Important Notes -->
+      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+        <div class="flex items-start space-x-3">
+          <i data-lucide="info" class="h-6 w-6 text-yellow-600 mt-0.5"></i>
+          <div>
+            <h3 class="text-lg font-medium text-yellow-800 mb-2">
+              Important Notes
+            </h3>
+            <ul class="text-yellow-700 space-y-1 text-sm">
+              <li>
+                • All data is stored locally in your browser using localStorage
+              </li>
+              <li>
+                • Your data never leaves your device and is completely private
+              </li>
+              <li>
+                • Data will persist until you clear your browser data or use the
+                reset function
+              </li>
+              <li>
+                • This is a demo environment - no real backend integration
+              </li>
+              <li>
+                • You can export your demo data and import it later if needed
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-white">TestBay</h3>
+          <p class="mt-2 text-gray-400">Test result management made simple</p>
+          <div class="mt-6 flex justify-center space-x-6">
+            <a href="index.html" class="text-gray-400 hover:text-gray-300"
+              >Home</a
+            >
+            <a href="pricing.html" class="text-gray-400 hover:text-gray-300"
+              >Pricing</a
+            >
+            <a href="demo.html" class="text-gray-400 hover:text-gray-300"
+              >Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/demo-data-generator.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

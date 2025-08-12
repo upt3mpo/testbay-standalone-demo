@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - TestBay Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Demo Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <a href="index.html" class="text-2xl font-bold text-blue-600"
+                >TestBay</a
+              >
+            </div>
+            <div class="ml-8 flex items-center space-x-4">
+              <a
+                href="demo-dashboard.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Dashboard</a
+              >
+              <a
+                href="demo-projects.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Projects</a
+              >
+              <a
+                href="demo-runs.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Test Runs</a
+              >
+              <a
+                href="demo-analytics.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Analytics</a
+              >
+              <a
+                href="demo-settings.html"
+                class="bg-blue-100 text-blue-700 px-3 py-2 rounded-md text-sm font-medium"
+                >Settings</a
+              >
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="demo.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >← Back to Demo</a
+            >
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Home</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Settings Content -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">Settings</h1>
+        <p class="mt-2 text-gray-600">Manage your demo data and preferences</p>
+      </div>
+
+      <!-- Data Management Section -->
+      <div class="bg-white rounded-lg shadow border border-gray-200 mb-8">
+        <div class="px-6 py-4 border-b border-gray-200">
+          <h3 class="text-lg font-medium text-gray-900">Data Management</h3>
+          <p class="text-sm text-gray-600 mt-1">
+            Manage your demo data and reset the environment
+          </p>
+        </div>
+        <div class="p-6">
+          <!-- Current Data Stats -->
+          <div class="mb-6">
+            <h4 class="text-md font-medium text-gray-900 mb-4">Current Data</h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center">
+                  <i
+                    data-lucide="folder"
+                    class="h-6 w-6 text-blue-600 mr-3"
+                  ></i>
+                  <div>
+                    <p
+                      class="text-sm font-medium text-gray-900"
+                      id="projects-count"
+                    >
+                      0
+                    </p>
+                    <p class="text-xs text-gray-500">Projects</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center">
+                  <i data-lucide="play" class="h-6 w-6 text-green-600 mr-3"></i>
+                  <div>
+                    <p
+                      class="text-sm font-medium text-gray-900"
+                      id="runs-count"
+                    >
+                      0
+                    </p>
+                    <p class="text-xs text-gray-500">Test Runs</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <div class="flex items-center">
+                  <i
+                    data-lucide="database"
+                    class="h-6 w-6 text-purple-600 mr-3"
+                  ></i>
+                  <div>
+                    <p
+                      class="text-sm font-medium text-gray-900"
+                      id="storage-size"
+                    >
+                      0 KB
+                    </p>
+                    <p class="text-xs text-gray-500">Storage Used</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Actions -->
+          <div class="space-y-4">
+            <div
+              class="flex items-center justify-between p-4 border border-gray-200 rounded-lg"
+            >
+              <div class="flex items-center space-x-3">
+                <i data-lucide="refresh-cw" class="h-5 w-5 text-yellow-600"></i>
+                <div>
+                  <p class="text-sm font-medium text-gray-900">
+                    Reset Demo Data
+                  </p>
+                  <p class="text-xs text-gray-500">
+                    Clear all data and start fresh
+                  </p>
+                </div>
+              </div>
+              <button
+                id="reset-data-btn"
+                class="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-700 transition-colors text-sm"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demo Information Section -->
+      <div class="bg-white rounded-lg shadow border border-gray-200 mb-8">
+        <div class="px-6 py-4 border-b border-gray-200">
+          <h3 class="text-lg font-medium text-gray-900">Demo Information</h3>
+          <p class="text-sm text-gray-600 mt-1">Learn more about this demo</p>
+        </div>
+        <div class="p-6">
+          <div class="space-y-4">
+            <div class="flex items-start space-x-3">
+              <i data-lucide="info" class="h-5 w-5 text-blue-600 mt-0.5"></i>
+              <div>
+                <p class="text-sm font-medium text-gray-900">
+                  What is this demo?
+                </p>
+                <p class="text-sm text-gray-600 mt-1">
+                  This is a fully functional demo of TestBay, a test result
+                  management platform. All data is stored locally in your
+                  browser using localStorage.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <i data-lucide="shield" class="h-5 w-5 text-green-600 mt-0.5"></i>
+              <div>
+                <p class="text-sm font-medium text-gray-900">Data Privacy</p>
+                <p class="text-sm text-gray-600 mt-1">
+                  Your demo data never leaves your browser. It's stored locally
+                  and can be cleared at any time.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <i data-lucide="zap" class="h-5 w-5 text-yellow-600 mt-0.5"></i>
+              <div>
+                <p class="text-sm font-medium text-gray-900">
+                  Features Available
+                </p>
+                <p class="text-sm text-gray-600 mt-1">
+                  Create projects, upload test results, view analytics, and
+                  manage your test data - all without any backend.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <i
+                data-lucide="external-link"
+                class="h-5 w-5 text-purple-600 mt-0.5"
+              ></i>
+              <div>
+                <p class="text-sm font-medium text-gray-900">Learn More</p>
+                <p class="text-sm text-gray-600 mt-1">
+                  Visit our main site to learn about the full TestBay platform
+                  with real backend integration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions Section -->
+      <div class="bg-white rounded-lg shadow border border-gray-200">
+        <div class="px-6 py-4 border-b border-gray-200">
+          <h3 class="text-lg font-medium text-gray-900">Quick Actions</h3>
+          <p class="text-sm text-gray-600 mt-1">Common actions and shortcuts</p>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a
+              href="demo-dashboard.html"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              <i data-lucide="home" class="h-6 w-6 text-blue-600 mr-3"></i>
+              <div>
+                <p class="font-medium text-gray-900">Go to Dashboard</p>
+                <p class="text-sm text-gray-600">View overview and stats</p>
+              </div>
+            </a>
+
+            <a
+              href="demo-projects.html"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              <i data-lucide="plus" class="h-6 w-6 text-blue-600 mr-3"></i>
+              <div>
+                <p class="font-medium text-gray-900">Create Project</p>
+                <p class="text-sm text-gray-600">Start a new test project</p>
+              </div>
+            </a>
+
+            <a
+              href="demo-runs.html"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              <i data-lucide="upload" class="h-6 w-6 text-blue-600 mr-3"></i>
+              <div>
+                <p class="font-medium text-gray-900">Upload Results</p>
+                <p class="text-sm text-gray-600">Add test results</p>
+              </div>
+            </a>
+
+            <a
+              href="demo-analytics.html"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              <i
+                data-lucide="bar-chart-3"
+                class="h-6 w-6 text-blue-600 mr-3"
+              ></i>
+              <div>
+                <p class="font-medium text-gray-900">View Analytics</p>
+                <p class="text-sm text-gray-600">See detailed insights</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reset Confirmation Modal -->
+    <div
+      id="reset-confirmation-modal"
+      class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50"
+    >
+      <div
+        class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+        onclick="event.stopPropagation()"
+      >
+        <div class="mt-3 text-center">
+          <i
+            data-lucide="alert-triangle"
+            class="h-16 w-16 text-yellow-500 mx-auto mb-4"
+          ></i>
+          <h3 class="text-lg font-medium text-gray-900 mb-2">
+            Reset Demo Data?
+          </h3>
+          <p class="text-sm text-gray-600 mb-6">
+            This will permanently delete all your demo projects, test runs, and
+            analytics data. This action cannot be undone.
+          </p>
+
+          <!-- Fake Data Checkbox -->
+          <div class="mb-6 text-left">
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                id="generate-fake-data"
+                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                checked
+              />
+              <div>
+                <span class="text-sm font-medium text-gray-900"
+                  >Generate sample demo data</span
+                >
+                <p class="text-xs text-gray-500 mt-1">
+                  Create sample projects and test runs to explore the app
+                </p>
+              </div>
+            </label>
+          </div>
+
+          <div class="flex justify-center space-x-3">
+            <button
+              id="cancel-reset"
+              class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors"
+            >
+              Cancel
+            </button>
+            <button
+              id="confirm-reset"
+              class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+            >
+              Reset All Data
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/demo-data-generator.js"></script>
+    <script src="js/demo-settings.js"></script>
+  </body>
+</html>

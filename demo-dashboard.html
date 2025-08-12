@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - TestBay Demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Demo Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <a href="index.html" class="text-2xl font-bold text-blue-600"
+                >TestBay</a
+              >
+            </div>
+            <div class="ml-8 flex items-center space-x-4">
+              <a
+                href="demo-dashboard.html"
+                class="bg-blue-100 text-blue-700 px-3 py-2 rounded-md text-sm font-medium"
+                >Dashboard</a
+              >
+              <a
+                href="demo-projects.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Projects</a
+              >
+              <a
+                href="demo-runs.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Test Runs</a
+              >
+              <a
+                href="demo-analytics.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Analytics</a
+              >
+              <a
+                href="demo-settings.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                >Settings</a
+              >
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="demo.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >← Back to Demo</a
+            >
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Home</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+        <p class="mt-2 text-gray-600">
+          Overview of your test results and project performance
+        </p>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 hover:shadow-lg hover:scale-105 transition-all duration-200 transform"
+        >
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <i data-lucide="folder" class="h-8 w-8 text-blue-600"></i>
+            </div>
+            <div class="ml-4">
+              <p class="text-sm font-medium text-gray-600">Total Projects</p>
+              <p class="text-2xl font-bold text-gray-900" id="total-projects">
+                0
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 hover:shadow-lg hover:scale-105 transition-all duration-200 transform"
+        >
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <i data-lucide="play" class="h-8 w-8 text-green-600"></i>
+            </div>
+            <div class="ml-4">
+              <p class="text-sm font-medium text-gray-600">Total Runs</p>
+              <p class="text-2xl font-bold text-gray-900" id="total-runs">0</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 hover:shadow-lg hover:scale-105 transition-all duration-200 transform"
+        >
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <i data-lucide="check-circle" class="h-8 w-8 text-green-600"></i>
+            </div>
+            <div class="ml-4">
+              <p class="text-sm font-medium text-gray-600">Success Rate</p>
+              <p class="text-2xl font-bold text-gray-900" id="success-rate">
+                0%
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-lg shadow p-6 border border-gray-200 hover:shadow-lg hover:scale-105 transition-all duration-200 transform"
+        >
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <i data-lucide="clock" class="h-8 w-8 text-blue-600"></i>
+            </div>
+            <div class="ml-4">
+              <p class="text-sm font-medium text-gray-600">Avg Duration</p>
+              <p class="text-2xl font-bold text-gray-900" id="avg-duration">
+                0s
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Recent Test Runs -->
+        <div class="bg-white rounded-lg shadow border border-gray-200">
+          <div class="px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-medium text-gray-900">Recent Test Runs</h3>
+          </div>
+          <div class="p-6">
+            <div id="recent-runs" class="space-y-4">
+              <!-- Recent runs will be populated here -->
+            </div>
+            <div class="mt-4 text-center">
+              <a
+                href="demo-runs.html"
+                class="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                >View all runs →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Status -->
+        <div class="bg-white rounded-lg shadow border border-gray-200">
+          <div class="px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-medium text-gray-900">Project Status</h3>
+          </div>
+          <div class="p-6">
+            <div id="project-status" class="space-y-4">
+              <!-- Project status will be populated here -->
+            </div>
+            <div class="mt-4 text-center">
+              <a
+                href="demo-projects.html"
+                class="text-blue-600 hover:text-blue-700 text-sm font-medium"
+                >View all projects →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="mt-8 bg-white rounded-lg shadow border border-gray-200">
+        <div class="px-6 py-4 border-b border-gray-200">
+          <h3 class="text-lg font-medium text-gray-900">Quick Actions</h3>
+        </div>
+        <div class="p-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a
+              href="demo-projects.html"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              <i data-lucide="plus" class="h-6 w-6 text-blue-600 mr-3"></i>
+              <div>
+                <p class="font-medium text-gray-900">Create Project</p>
+                <p class="text-sm text-gray-600">Start a new test project</p>
+              </div>
+            </a>
+            <a
+              href="demo-runs.html"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              <i data-lucide="upload" class="h-6 w-6 text-blue-600 mr-3"></i>
+              <div>
+                <p class="font-medium text-gray-900">Upload Results</p>
+                <p class="text-sm text-gray-600">Add test results</p>
+              </div>
+            </a>
+            <a
+              href="demo-analytics.html"
+              class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
+            >
+              <i
+                data-lucide="bar-chart-3"
+                class="h-6 w-6 text-blue-600 mr-3"
+              ></i>
+              <div>
+                <p class="font-medium text-gray-900">View Analytics</p>
+                <p class="text-sm text-gray-600">See detailed insights</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="js/utils.js"></script>
+    <script src="js/demo-data-generator.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/demo-dashboard.js"></script>
+  </body>
+</html>

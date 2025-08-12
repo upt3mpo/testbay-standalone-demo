@@ -1,0 +1,31 @@
+{
+  "name": "testbay-standalone-demo",
+  "version": "1.0.0",
+  "description": "Standalone demo of TestBay test result management platform",
+  "main": "index.html",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "install-browsers": "playwright install",
+    "start": "python3 -m http.server 8000",
+    "start:python": "python -m http.server 8000"
+  },
+  "keywords": [
+    "test-results",
+    "testing",
+    "demo",
+    "standalone",
+    "playwright"
+  ],
+  "author": "TestBay Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

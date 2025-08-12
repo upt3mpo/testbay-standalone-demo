@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TestBay — Test Results Dashboard for modern teams</title>
+    <meta
+      name="description"
+      content="Parse results from Cypress, Playwright, JUnit, Selenium, Mocha and more into one dashboard. Track pass rates, flakes and failures with beautiful analytics."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <h1 class="text-2xl font-bold text-blue-600">TestBay</h1>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Home</a
+            >
+            <a
+              href="pricing.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              >Pricing</a
+            >
+            <a
+              href="demo.html"
+              class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
+              >Try Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div
+      class="relative bg-gradient-to-br from-gray-100 via-gray-50 to-white py-16 lg:py-32"
+    >
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Main Brand Heading -->
+        <div class="mb-16 text-center">
+          <div class="mb-6 flex items-center justify-center">
+            <i
+              data-lucide="check-circle"
+              class="mr-4 h-16 w-16 text-blue-600"
+            ></i>
+            <h1
+              class="text-6xl font-black text-gray-900 sm:text-7xl lg:text-8xl"
+            >
+              Test<span class="text-blue-600">Bay</span>
+            </h1>
+          </div>
+          <p class="mx-auto max-w-3xl text-xl text-gray-600 sm:text-2xl">
+            The ultimate platform for test result management and analytics
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-center gap-12 pb-16 lg:flex-row"
+        >
+          <!-- Hero Content -->
+          <div
+            class="flex w-full flex-col items-center text-center lg:w-1/2 lg:items-start lg:text-left"
+          >
+            <div
+              class="w-full max-w-xl rounded-xl bg-white p-8 shadow-xl border border-gray-200"
+            >
+              <h2 class="mb-4 text-3xl font-extrabold sm:text-4xl">
+                Test Results <span class="text-blue-600">Made Simple</span>
+              </h2>
+              <p class="mb-8 text-lg text-gray-600">
+                Upload, analyze, and track your test results across multiple
+                frameworks. Get insights into your test performance with
+                beautiful dashboards and detailed reporting.
+              </p>
+              <div
+                class="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start"
+              >
+                <a
+                  href="demo.html"
+                  class="rounded-md bg-blue-600 px-6 py-3 text-lg font-semibold text-white shadow transition-colors hover:bg-blue-700"
+                  >🚀 Try Live Demo</a
+                >
+                <a
+                  href="https://github.com/yourusername/testbay"
+                  class="rounded-md bg-gray-600 px-6 py-3 text-lg font-semibold text-white shadow transition-colors hover:bg-gray-700"
+                >
+                  Star on GitHub
+                </a>
+                <a
+                  href="https://twitter.com/testbay"
+                  class="rounded-md border border-gray-300 px-6 py-3 text-lg font-semibold text-gray-700 shadow transition-colors hover:bg-gray-50"
+                >
+                  Follow on X
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Screenshot Placeholder -->
+          <div
+            class="mt-12 flex w-full items-center justify-center lg:mt-0 lg:w-1/2"
+          >
+            <div
+              class="w-full max-w-lg rounded-xl border border-gray-200 bg-white p-6 shadow-2xl"
+            >
+              <!-- Mock Dashboard Header -->
+              <div
+                class="mb-4 flex items-center justify-between border-b border-gray-200 pb-3"
+              >
+                <div class="flex items-center space-x-2">
+                  <div class="h-3 w-3 rounded-full bg-red-500"></div>
+                  <div class="h-3 w-3 rounded-full bg-yellow-500"></div>
+                  <div class="h-3 w-3 rounded-full bg-green-500"></div>
+                </div>
+                <div class="text-sm font-medium text-gray-600">
+                  TestBay Dashboard
+                </div>
+                <div
+                  class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600"
+                >
+                  <span class="text-xs font-bold text-white">TB</span>
+                </div>
+              </div>
+
+              <!-- Mock Stats Cards -->
+              <div class="mb-4 grid grid-cols-2 gap-3">
+                <div class="rounded-lg bg-gray-100 p-3">
+                  <div class="mb-1 text-xs text-gray-600">Total Runs</div>
+                  <div class="text-lg font-bold text-gray-900">1,247</div>
+                  <div class="text-xs text-green-600">↗ +12%</div>
+                </div>
+                <div class="rounded-lg bg-gray-100 p-3">
+                  <div class="mb-1 text-xs text-gray-600">Success Rate</div>
+                  <div class="text-lg font-bold text-gray-900">94.2%</div>
+                  <div class="text-xs text-green-600">↗ +2.1%</div>
+                </div>
+              </div>
+
+              <!-- Mock Chart -->
+              <div class="mb-4 rounded-lg bg-gray-100 p-3">
+                <div class="mb-2 text-xs text-gray-600">
+                  Test Results (Last 7 days)
+                </div>
+                <div class="flex h-16 items-end space-x-1">
+                  <div
+                    class="flex-1 rounded-t bg-blue-600"
+                    style="height: 60%"
+                  ></div>
+                  <div
+                    class="flex-1 rounded-t bg-blue-600"
+                    style="height: 80%"
+                  ></div>
+                  <div
+                    class="flex-1 rounded-t bg-blue-600"
+                    style="height: 45%"
+                  ></div>
+                  <div
+                    class="flex-1 rounded-t bg-blue-600"
+                    style="height: 90%"
+                  ></div>
+                  <div
+                    class="flex-1 rounded-t bg-blue-600"
+                    style="height: 70%"
+                  ></div>
+                  <div
+                    class="flex-1 rounded-t bg-blue-600"
+                    style="height: 85%"
+                  ></div>
+                  <div
+                    class="flex-1 rounded-t bg-blue-600"
+                    style="height: 75%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Mock Recent Runs -->
+              <div class="space-y-2">
+                <div class="text-xs font-medium text-gray-600">
+                  Recent Test Runs
+                </div>
+                <div class="space-y-2">
+                  <div
+                    class="flex items-center justify-between rounded bg-gray-100 p-2"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <div class="h-2 w-2 rounded-full bg-green-500"></div>
+                      <span class="text-xs text-gray-900">E2E Tests</span>
+                    </div>
+                    <span class="text-xs text-gray-600">2m ago</span>
+                  </div>
+                  <div
+                    class="flex items-center justify-between rounded bg-gray-100 p-2"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <div class="h-2 w-2 rounded-full bg-red-500"></div>
+                      <span class="text-xs text-gray-900">Unit Tests</span>
+                    </div>
+                    <span class="text-xs text-gray-600">5m ago</span>
+                  </div>
+                  <div
+                    class="flex items-center justify-between rounded bg-gray-100 p-2"
+                  >
+                    <div class="flex items-center space-x-2">
+                      <div class="h-2 w-2 rounded-full bg-green-500"></div>
+                      <span class="text-xs text-gray-900">Integration</span>
+                    </div>
+                    <span class="text-xs text-gray-600">12m ago</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Animated Pulse Effect -->
+              <div class="absolute right-4 top-4">
+                <div
+                  class="h-2 w-2 animate-pulse rounded-full bg-green-500"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="bg-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+          <h2
+            class="text-base font-semibold uppercase tracking-wide text-blue-600"
+          >
+            Features
+          </h2>
+          <p
+            class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Everything you need for test result management
+          </p>
+          <p class="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
+            Upload test results from any framework and get instant insights into
+            your test performance.
+          </p>
+        </div>
+        <div class="mt-10">
+          <div
+            class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0"
+          >
+            <div class="relative">
+              <div
+                class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-blue-600 text-white"
+              >
+                <i data-lucide="upload" class="h-6 w-6"></i>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">
+                Multiple Framework Support
+              </p>
+              <p class="ml-16 mt-2 text-base text-gray-600">
+                Upload results from Cypress, Playwright, JUnit, Selenium, Mocha,
+                and more. We automatically detect and parse your test results.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-blue-600 text-white"
+              >
+                <i data-lucide="bar-chart-3" class="h-6 w-6"></i>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">
+                Beautiful Dashboards
+              </p>
+              <p class="ml-16 mt-2 text-base text-gray-600">
+                Get instant insights with our beautiful dashboards. Track test
+                trends, performance metrics, and failure patterns over time.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-blue-600 text-white"
+              >
+                <i data-lucide="clock" class="h-6 w-6"></i>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">
+                Real-time Updates
+              </p>
+              <p class="ml-16 mt-2 text-base text-gray-600">
+                See your test results update in real-time. Get notifications
+                when tests fail and track your team's progress across multiple
+                projects.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-blue-600 text-white"
+              >
+                <i data-lucide="zap" class="h-6 w-6"></i>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">
+                Lightning Fast
+              </p>
+              <p class="ml-16 mt-2 text-base text-gray-600">
+                Built for speed and performance. Parse thousands of test results
+                in seconds and get instant insights into your test suite health.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-blue-600 text-white"
+              >
+                <i data-lucide="users" class="h-6 w-6"></i>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">
+                Team Collaboration
+              </p>
+              <p class="ml-16 mt-2 text-base text-gray-600">
+                Share insights with your team. Set up notifications, create
+                reports, and collaborate on improving your test quality
+                together.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div
+                class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-blue-600 text-white"
+              >
+                <i data-lucide="shield-check" class="h-6 w-6"></i>
+              </div>
+              <p class="ml-16 text-lg font-medium leading-6 text-gray-900">
+                Enterprise Security
+              </p>
+              <p class="ml-16 mt-2 text-base text-gray-600">
+                Bank-grade security for your test data. Role-based access
+                control, audit logs, and compliance with enterprise security
+                standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="bg-blue-600">
+      <div
+        class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8"
+      >
+        <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+          <span class="block">Ready to get started?</span>
+          <span class="block">Try our demo today.</span>
+        </h2>
+        <p class="mt-4 text-lg leading-6 text-blue-200">
+          Experience the full TestBay platform without signing up. All data is
+          stored locally in your browser.
+        </p>
+        <a
+          href="demo.html"
+          class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 sm:w-auto"
+        >
+          Launch Demo
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold text-white">TestBay</h3>
+          <p class="mt-2 text-gray-400">Test result management made simple</p>
+          <div class="mt-6 flex justify-center space-x-6">
+            <a href="index.html" class="text-gray-400 hover:text-gray-300"
+              >Home</a
+            >
+            <a href="pricing.html" class="text-gray-400 hover:text-gray-300"
+              >Pricing</a
+            >
+            <a href="demo.html" class="text-gray-400 hover:text-gray-300"
+              >Demo</a
+            >
+          </div>
+          <div class="mt-6 flex justify-center space-x-6">
+            <a
+              href="https://github.com/yourusername/testbay"
+              class="text-gray-400 hover:text-gray-300"
+              >GitHub</a
+            >
+            <a
+              href="https://twitter.com/testbay"
+              class="text-gray-400 hover:text-gray-300"
+              >Twitter</a
+            >
+            <a
+              href="mailto:hello@testbay.com"
+              class="text-gray-400 hover:text-gray-300"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="js/demo-data-generator.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
